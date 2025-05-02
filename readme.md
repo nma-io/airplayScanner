@@ -6,8 +6,6 @@ Author: Nicholas Albright (@nma-io)
 
 Apple AirPlay runs on TCP port 7000 for any device that supports it, including MacBook, iPad?, iPhone?, AppleTV, and a host of third-party products. The information available for a device can be pulled via an HTTP GET request, without authentication, on port 7000 by hitting the endpoint `/info`.
 
-A raw dump of this output is available in `output.bin`.
-
 ## Reverse Engineering
 
 It appears that important fields are delimited by the hex `5f 10` followed by the size of the next string. The response is a binary property list (bplist00).
